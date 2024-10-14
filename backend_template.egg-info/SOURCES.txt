@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+app/__init__.py
+app/main.py
+backend_template.egg-info/PKG-INFO
+backend_template.egg-info/SOURCES.txt
+backend_template.egg-info/dependency_links.txt
+backend_template.egg-info/requires.txt
+backend_template.egg-info/top_level.txt

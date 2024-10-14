@@ -1,0 +1,103 @@
+[project]
+name = "backend-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.0",
+    "httpx>=0.27.2",
+    "pydantic-settings>=2.5.2"
+]
+
+[tool.uv]
+package = true
+dev-dependencies = [
+    "black>=24.8.0",
+    "isort>=5.13.2",
+    "pre-commit>=3.8.0",
+    "pytest>=8.3.3",
+    "ruff>=0.6.8"
+]
+
+[tool.black]
+line-length = 120
+target-version = ['py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 120
+py_version = "312"
+lines_after_imports = 2
+skip = [
+    "build",
+    "dist",
+    ".tox",
+    ".venv",
+    ".eggs",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".git",
+    ".hg",
+    ".buckd",
+    ".pants.d",
+    ".pants.plugins",
+    ".pants.local",
+    ".pants.workdir",
+    ".pants.d",
+    "__pycache__",
+]
+
+[tool.ruff]
+exclude = [
+    "build",
+    "dist",
+    ".tox",
+    ".venv",
+    ".eggs",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".git",
+    ".hg",
+    ".buckd",
+    ".pants.d",
+    ".pants.plugins",
+    ".pants.local",
+    ".pants.workdir",
+    ".pants.d",
+    "__pycache__",
+]
+
+line-length = 120
+indent-width = 4
+
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = []
+
+fixable = ["ALL"]
+
+[tool.ruff.format]
+# quote-style = "double"
+# indent-style = "space"
+# skip-magic-trailling-comma = false
+line-ending = "auto"
+

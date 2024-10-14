@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: backend-template
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi[standard]>=0.115.0
+Requires-Dist: httpx>=0.27.2
+Requires-Dist: pydantic-settings>=2.5.2
+
+# BACKEND TEMPLATE
+
+## Development
+
+run `./start.sh`
+
+run `uv run fastapi dev app/main.py` to run local dev server
+
+## Dependencies
+
+To add dependencies run `uv add <lib> [--extras]`
